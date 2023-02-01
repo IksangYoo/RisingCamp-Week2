@@ -7,7 +7,6 @@
 
 import UIKit
 
-@IBDesignable
 class CustomButton: UIButton {
 
     @IBInspectable var borderWidth: CGFloat {

@@ -17,6 +17,11 @@
 		DDDBE70C298910C5007FA5C7 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDBE70B298910C5007FA5C7 /* CustomView.swift */; };
 		DDDBE70E2989118C007FA5C7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDBE70D2989118C007FA5C7 /* CustomButton.swift */; };
 		DDDBE71029891506007FA5C7 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDBE70F29891506007FA5C7 /* CustomImageView.swift */; };
+		DDDCE727298A4C3900C33E2C /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDCE726298A4C3900C33E2C /* OrderViewController.swift */; };
+		DDDCE72C298A4EA000C33E2C /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDCE72A298A4EA000C33E2C /* OrderTableViewCell.swift */; };
+		DDDCE72D298A4EA000C33E2C /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDDCE72B298A4EA000C33E2C /* OrderTableViewCell.xib */; };
+		DDDCE72F298A755800C33E2C /* TableVIewCustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDCE72E298A755800C33E2C /* TableVIewCustomHeader.swift */; };
+		DDDCE733298A781300C33E2C /* TableVIewCustomHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDDCE732298A781300C33E2C /* TableVIewCustomHeader.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		DDDBE70B298910C5007FA5C7 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		DDDBE70D2989118C007FA5C7 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		DDDBE70F29891506007FA5C7 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		DDDCE726298A4C3900C33E2C /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		DDDCE72A298A4EA000C33E2C /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		DDDCE72B298A4EA000C33E2C /* OrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
+		DDDCE72E298A755800C33E2C /* TableVIewCustomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVIewCustomHeader.swift; sourceTree = "<group>"; };
+		DDDCE732298A781300C33E2C /* TableVIewCustomHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableVIewCustomHeader.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +62,10 @@
 				DDDBE70B298910C5007FA5C7 /* CustomView.swift */,
 				DDDBE70D2989118C007FA5C7 /* CustomButton.swift */,
 				DDDBE70F29891506007FA5C7 /* CustomImageView.swift */,
+				DDDCE72A298A4EA000C33E2C /* OrderTableViewCell.swift */,
+				DDDCE72B298A4EA000C33E2C /* OrderTableViewCell.xib */,
+				DDDCE72E298A755800C33E2C /* TableVIewCustomHeader.swift */,
+				DDDCE732298A781300C33E2C /* TableVIewCustomHeader.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -60,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				DDA5AD4629888630004B3D62 /* HomeViewController.swift */,
+				DDDCE726298A4C3900C33E2C /* OrderViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -155,7 +170,9 @@
 			files = (
 				DDA5AD4F29888631004B3D62 /* LaunchScreen.storyboard in Resources */,
 				DDA5AD4C29888631004B3D62 /* Assets.xcassets in Resources */,
+				DDDCE72D298A4EA000C33E2C /* OrderTableViewCell.xib in Resources */,
 				DDA5AD4A29888630004B3D62 /* Main.storyboard in Resources */,
+				DDDCE733298A781300C33E2C /* TableVIewCustomHeader.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +189,10 @@
 				DDDBE71029891506007FA5C7 /* CustomImageView.swift in Sources */,
 				DDA5AD4329888630004B3D62 /* AppDelegate.swift in Sources */,
 				DDA5AD4529888630004B3D62 /* SceneDelegate.swift in Sources */,
+				DDDCE72C298A4EA000C33E2C /* OrderTableViewCell.swift in Sources */,
 				DD0212682988C45D000A73FF /* CustomLabel.swift in Sources */,
+				DDDCE727298A4C3900C33E2C /* OrderViewController.swift in Sources */,
+				DDDCE72F298A755800C33E2C /* TableVIewCustomHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
