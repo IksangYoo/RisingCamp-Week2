@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD0212682988C45D000A73FF /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0212672988C45D000A73FF /* CustomLabel.swift */; };
 		DDA5AD4329888630004B3D62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA5AD4229888630004B3D62 /* AppDelegate.swift */; };
 		DDA5AD4529888630004B3D62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA5AD4429888630004B3D62 /* SceneDelegate.swift */; };
-		DDA5AD4729888630004B3D62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA5AD4629888630004B3D62 /* ViewController.swift */; };
+		DDA5AD4729888630004B3D62 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA5AD4629888630004B3D62 /* HomeViewController.swift */; };
 		DDA5AD4A29888630004B3D62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA5AD4829888630004B3D62 /* Main.storyboard */; };
 		DDA5AD4C29888631004B3D62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA5AD4B29888631004B3D62 /* Assets.xcassets */; };
 		DDA5AD4F29888631004B3D62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA5AD4D29888631004B3D62 /* LaunchScreen.storyboard */; };
+		DDDBE70C298910C5007FA5C7 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDBE70B298910C5007FA5C7 /* CustomView.swift */; };
+		DDDBE70E2989118C007FA5C7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDBE70D2989118C007FA5C7 /* CustomButton.swift */; };
+		DDDBE71029891506007FA5C7 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDBE70F29891506007FA5C7 /* CustomImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD0212672988C45D000A73FF /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		DDA5AD3F29888630004B3D62 /* RisingCamp-Week2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RisingCamp-Week2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA5AD4229888630004B3D62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDA5AD4429888630004B3D62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DDA5AD4629888630004B3D62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DDA5AD4629888630004B3D62 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DDA5AD4929888630004B3D62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DDA5AD4B29888631004B3D62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDA5AD4E29888631004B3D62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDA5AD5029888631004B3D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDDBE70B298910C5007FA5C7 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		DDDBE70D2989118C007FA5C7 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		DDDBE70F29891506007FA5C7 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +45,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD0212692989100A000A73FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD0212672988C45D000A73FF /* CustomLabel.swift */,
+				DDDBE70B298910C5007FA5C7 /* CustomView.swift */,
+				DDDBE70D2989118C007FA5C7 /* CustomButton.swift */,
+				DDDBE70F29891506007FA5C7 /* CustomImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DD2E9E5C2989E6BB00DEF7C7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DDA5AD4629888630004B3D62 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		DDA5AD3629888630004B3D62 = {
 			isa = PBXGroup;
 			children = (
@@ -56,9 +83,10 @@
 		DDA5AD4129888630004B3D62 /* RisingCamp-Week2 */ = {
 			isa = PBXGroup;
 			children = (
+				DD2E9E5C2989E6BB00DEF7C7 /* Controller */,
+				DD0212692989100A000A73FF /* View */,
 				DDA5AD4229888630004B3D62 /* AppDelegate.swift */,
 				DDA5AD4429888630004B3D62 /* SceneDelegate.swift */,
-				DDA5AD4629888630004B3D62 /* ViewController.swift */,
 				DDA5AD4829888630004B3D62 /* Main.storyboard */,
 				DDA5AD4B29888631004B3D62 /* Assets.xcassets */,
 				DDA5AD4D29888631004B3D62 /* LaunchScreen.storyboard */,
@@ -138,9 +166,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDA5AD4729888630004B3D62 /* ViewController.swift in Sources */,
+				DDDBE70C298910C5007FA5C7 /* CustomView.swift in Sources */,
+				DDA5AD4729888630004B3D62 /* HomeViewController.swift in Sources */,
+				DDDBE70E2989118C007FA5C7 /* CustomButton.swift in Sources */,
+				DDDBE71029891506007FA5C7 /* CustomImageView.swift in Sources */,
 				DDA5AD4329888630004B3D62 /* AppDelegate.swift in Sources */,
 				DDA5AD4529888630004B3D62 /* SceneDelegate.swift in Sources */,
+				DD0212682988C45D000A73FF /* CustomLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
