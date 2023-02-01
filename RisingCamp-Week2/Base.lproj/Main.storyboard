@@ -29,6 +29,11 @@
                                     <tabBarItem title="Gift" image="gift.fill" catalog="system" id="82e-At-S9B"/>
                                     <tabBarItem title="Offers" image="star.fill" catalog="system" id="mUN-5X-CX6"/>
                                 </items>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                        <color key="value" red="0.0" green="0.52142769099999997" blue="0.26058948040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </tabBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BgZ-R9-g4R" userLabel="TopView">
                                 <rect key="frame" x="0.0" y="59" width="430" height="180"/>
