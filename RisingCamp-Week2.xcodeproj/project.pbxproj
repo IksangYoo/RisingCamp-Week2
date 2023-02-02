@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C049E483D7970309F9627AF0 /* Pods_RisingCamp_Week2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C84760D46347C00535C3A /* Pods_RisingCamp_Week2.framework */; };
 		DD0212682988C45D000A73FF /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0212672988C45D000A73FF /* CustomLabel.swift */; };
+		DD45D8E2298B8FB400F82544 /* HotCoffeesMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD45D8E1298B8FB400F82544 /* HotCoffeesMenuViewController.swift */; };
 		DDA5AD4329888630004B3D62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA5AD4229888630004B3D62 /* AppDelegate.swift */; };
 		DDA5AD4529888630004B3D62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA5AD4429888630004B3D62 /* SceneDelegate.swift */; };
 		DDA5AD4729888630004B3D62 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA5AD4629888630004B3D62 /* HomeViewController.swift */; };
@@ -23,6 +24,7 @@
 		DDDCE72D298A4EA000C33E2C /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDDCE72B298A4EA000C33E2C /* OrderTableViewCell.xib */; };
 		DDDCE72F298A755800C33E2C /* TableVIewCustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDCE72E298A755800C33E2C /* TableVIewCustomHeader.swift */; };
 		DDDCE733298A781300C33E2C /* TableVIewCustomHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDDCE732298A781300C33E2C /* TableVIewCustomHeader.xib */; };
+		DDE8FDD4298B875D00589A93 /* HotCoffeesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE8FDD3298B875D00589A93 /* HotCoffeesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,7 @@
 		C84C84760D46347C00535C3A /* Pods_RisingCamp_Week2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RisingCamp_Week2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5EBF559B30A0F9C662373A0 /* Pods-RisingCamp-Week2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RisingCamp-Week2.debug.xcconfig"; path = "Target Support Files/Pods-RisingCamp-Week2/Pods-RisingCamp-Week2.debug.xcconfig"; sourceTree = "<group>"; };
 		DD0212672988C45D000A73FF /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
+		DD45D8E1298B8FB400F82544 /* HotCoffeesMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotCoffeesMenuViewController.swift; sourceTree = "<group>"; };
 		DDA5AD3F29888630004B3D62 /* RisingCamp-Week2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RisingCamp-Week2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA5AD4229888630004B3D62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDA5AD4429888630004B3D62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		DDDCE72B298A4EA000C33E2C /* OrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
 		DDDCE72E298A755800C33E2C /* TableVIewCustomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVIewCustomHeader.swift; sourceTree = "<group>"; };
 		DDDCE732298A781300C33E2C /* TableVIewCustomHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableVIewCustomHeader.xib; sourceTree = "<group>"; };
+		DDE8FDD3298B875D00589A93 /* HotCoffeesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotCoffeesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			children = (
 				DDA5AD4629888630004B3D62 /* HomeViewController.swift */,
 				DDDCE726298A4C3900C33E2C /* OrderViewController.swift */,
+				DDE8FDD3298B875D00589A93 /* HotCoffeesViewController.swift */,
+				DD45D8E1298B8FB400F82544 /* HotCoffeesMenuViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -122,8 +128,9 @@
 		DDA5AD4129888630004B3D62 /* RisingCamp-Week2 */ = {
 			isa = PBXGroup;
 			children = (
-				DD2E9E5C2989E6BB00DEF7C7 /* Controller */,
+				DDE8FDD2298B45A400589A93 /* Model */,
 				DD0212692989100A000A73FF /* View */,
+				DD2E9E5C2989E6BB00DEF7C7 /* Controller */,
 				DDA5AD4229888630004B3D62 /* AppDelegate.swift */,
 				DDA5AD4429888630004B3D62 /* SceneDelegate.swift */,
 				DDA5AD4829888630004B3D62 /* Main.storyboard */,
@@ -132,6 +139,13 @@
 				DDA5AD5029888631004B3D62 /* Info.plist */,
 			);
 			path = "RisingCamp-Week2";
+			sourceTree = "<group>";
+		};
+		DDE8FDD2298B45A400589A93 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,7 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDDBE70C298910C5007FA5C7 /* CustomView.swift in Sources */,
+				DDE8FDD4298B875D00589A93 /* HotCoffeesViewController.swift in Sources */,
 				DDA5AD4729888630004B3D62 /* HomeViewController.swift in Sources */,
+				DD45D8E2298B8FB400F82544 /* HotCoffeesMenuViewController.swift in Sources */,
 				DDDBE70E2989118C007FA5C7 /* CustomButton.swift in Sources */,
 				DDDBE71029891506007FA5C7 /* CustomImageView.swift in Sources */,
 				DDA5AD4329888630004B3D62 /* AppDelegate.swift in Sources */,

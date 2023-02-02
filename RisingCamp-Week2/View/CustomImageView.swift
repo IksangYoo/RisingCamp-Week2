@@ -17,5 +17,9 @@ class CustomImageView: UIImageView {
         shape.path = maskPath.cgPath
         layer.mask = shape
     }
-
+    
+    public func makeCircular() {
+        self.layer.cornerRadius = self.frame.size.height / 2
+        self.clipsToBounds = true
+    }
 }

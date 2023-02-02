@@ -12,7 +12,7 @@ class OrderViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    
+
     private lazy var underLineView: UIView = {
         let view = UIView()
         view.backgroundColor = #colorLiteral(red: 0, green: 0.521427691, blue: 0.2605894804, alpha: 1)
@@ -40,12 +40,13 @@ class OrderViewController: UIViewController {
             leadingDistance,
             underLineView.widthAnchor.constraint(equalTo: segmentedControl.widthAnchor, multiplier: 1 / CGFloat(segmentedControl.numberOfSegments))
         ])
-//        //펜 액션
-//        let panGestureRecongnizer = UIPanGestureRecognizer(target: self, action: #selector(panAction(_ :)))
-//
-//        panGestureRecongnizer.delegate = self
+        //펜 액션
+        let panGestureRecongnizer = UIPanGestureRecognizer(target: self, action: #selector(panAction(_ :)))
+
+        panGestureRecongnizer.delegate = self
         
-//        self.view.addGestureRecognizer(panGestureRecongnizer)
+        self.view.addGestureRecognizer(panGestureRecongnizer)
+        
 
         segmentedControlUI()
         let nibName = UINib(nibName: "OrderTableViewCell", bundle: nil)
@@ -95,6 +96,7 @@ class OrderViewController: UIViewController {
 //MARK: - TableViewDelegate, TableViewDataSource
 extension OrderViewController: UITableViewDelegate, UITableViewDataSource {
     
+    //Section별 row갯수 설정
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return drinks.count
@@ -110,8 +112,10 @@ extension OrderViewController: UITableViewDelegate, UITableViewDataSource {
              return UITableViewCell()
          }
         if indexPath.section == 0 {
+            cell.menuImageView.image = UIImage(named: "Home2.png")
             cell.menuName.text = "\(drinks[indexPath.row])"
         } else if indexPath.section == 1 {
+            cell.menuImageView.image = UIImage(named: "Home3.png")
             cell.menuName.text = "\(food[indexPath.row])"
         } else {
             return UITableViewCell()
@@ -122,41 +126,48 @@ extension OrderViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return sectionTitle.count
     }
-//
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return sectionTitle[section]
-//    }
-//
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.section == 0 {
+            self.performSegue(withIdentifier: "goTo\(drinks[indexPath.row])", sender: nil)
+        }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 90
+    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "TableVIewCustomHeader") as! TableVIewCustomHeader
 
         header.sectionTitle.text = sectionTitle[section]
+        header.seeAllLabel.text = sectionSeeAll[section]
         return header
     }
 }
 
-////MARK: - UIGestureRecognizerDelegate
-//extension OrderViewController: UIGestureRecognizerDelegate {
-//
-//    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool{
-//
-//        return true
-//
-//    }
-//
-//    @objc func panAction (_ sender : UIPanGestureRecognizer){
-//
-//            let velocity = sender.velocity(in: tableView)
-//
-//        if abs(velocity.y) > abs(velocity.x) {
-//            if (velocity.y < 0 ){
-//                print("down")
-//                navigationItem.largeTitleDisplayMode = .never
-//            } else {
-//                print("up")
-//                navigationItem.largeTitleDisplayMode = .always
-//            }
-//
-//        }
-//    }
-//}
+//MARK: - UIGestureRecognizerDelegate
+extension OrderViewController: UIGestureRecognizerDelegate {
+
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool{
+
+        return true
+
+    }
+
+    @objc func panAction (_ sender : UIPanGestureRecognizer){
+
+            let velocity = sender.velocity(in: tableView)
+
+        if abs(velocity.y) > abs(velocity.x) {
+            if (velocity.y < 0 ){
+                navigationItem.largeTitleDisplayMode = .never
+            } else {
+                navigationItem.largeTitleDisplayMode = .always
+            }
+
+        }
+    }
+}
