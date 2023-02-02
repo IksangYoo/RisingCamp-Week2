@@ -12,7 +12,7 @@ class OrderViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-
+    private var shadowImageView: UIImageView?
     private lazy var underLineView: UIView = {
         let view = UIView()
         view.backgroundColor = #colorLiteral(red: 0, green: 0.521427691, blue: 0.2605894804, alpha: 1)
@@ -30,9 +30,26 @@ class OrderViewController: UIViewController {
     let drinks = ["Hot Coffees","Hot Teas","Hot Drinks","Frappuccino","Cold Coffees","Iced Teas","Cold Drinks"]
     let food = ["Hot Breakfast","Bakery","Lunch","Snacks & Sweets","Oatmeal & Yogurt"]
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if shadowImageView == nil {
+            shadowImageView = findShadowImage(under: navigationController!.navigationBar)
+        }
+        shadowImageView?.isHidden = true
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        shadowImageView?.isHidden = false
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Underline 오토레이아웃
+        self.tableView.backgroundColor = #colorLiteral(red: 0.9686275125, green: 0.9686275125, blue: 0.9686275125, alpha: 1)
         view.addSubview(underLineView)
         NSLayoutConstraint.activate([
             underLineView.bottomAnchor.constraint(equalTo: segmentedControl.bottomAnchor),
@@ -47,8 +64,15 @@ class OrderViewController: UIViewController {
         
         self.view.addGestureRecognizer(panGestureRecongnizer)
         
+//        //removing border
+//        let navigationBar = navigationController?.navigationBar
+//        let navigationBarAppearance = UINavigationBarAppearance()
+//        navigationBarAppearance.shadowColor = .clear
+//        navigationBar?.scrollEdgeAppearance = navigationBarAppearance
+        
 
         segmentedControlUI()
+        
         let nibName = UINib(nibName: "OrderTableViewCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "cell")
         
@@ -90,6 +114,19 @@ class OrderViewController: UIViewController {
         ], for: .selected)
     }
     
+    private func findShadowImage(under view: UIView) -> UIImageView? {
+        if view is UIImageView && view.bounds.size.height <= 1 {
+            return (view as! UIImageView)
+        }
+
+        for subview in view.subviews {
+            if let imageView = findShadowImage(under: subview) {
+                return imageView
+            }
+        }
+        return nil
+    }
+    
 }
 
 
@@ -120,6 +157,7 @@ extension OrderViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             return UITableViewCell()
         }
+        cell.backgroundColor = cell.contentView.backgroundColor;
         return cell
     }
     
