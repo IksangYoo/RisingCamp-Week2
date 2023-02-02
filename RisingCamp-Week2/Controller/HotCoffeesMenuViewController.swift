@@ -25,6 +25,15 @@ class HotCoffeesMenuViewController: UIViewController {
             
             }
         }
+        
+        var name: [String] {
+            switch self {
+            case .americanos: return ["Caffe Americano"]
+            case .brewedCoffees: return ["Veranda Blend","Caffe Misto","Dark Roast Coffee","Pike Place Roast","Decaf Pick Roast"]
+            case .cappucinos: return ["Cappucinos"]
+            case .espressoShots: return ["Espresso","Espresso"]
+            }
+        }
     }
     
     var type: drinksTypes = .americanos
@@ -51,8 +60,19 @@ class HotCoffeesMenuViewController: UIViewController {
 
 //MARK: - CollectionView Delegate & DataSource
 extension HotCoffeesMenuViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        if (type == .americanos){
+            return type.name.count
+        } else if (type == .brewedCoffees) {
+            return type.name.count
+        } else if (type == .cappucinos) {
+            return type.name.count
+        } else if (type == .espressoShots) {
+            return type.name.count
+        } else {
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -60,9 +80,25 @@ extension HotCoffeesMenuViewController: UICollectionViewDelegate, UICollectionVi
             return UICollectionViewCell()
         }
         cell.backgroundColor = cell.contentView.backgroundColor;
-        cell.name.text = "Caffe Americano"
-        cell.image.image = UIImage(named: "americano.png")
+        if (type == .americanos){
+            cell.image.image = UIImage(named: "americano.png")
+            cell.name.text = type.name[indexPath.row]
+        } else if (type == .brewedCoffees) {
+            cell.image.image = UIImage(named: "brewed.png")
+            cell.name.text = type.name[indexPath.row]
+        } else if (type == .cappucinos) {
+            cell.image.image = UIImage(named: "cappuccino.png")
+            cell.name.text = type.name[indexPath.row]
+        } else if (type == .espressoShots) {
+            cell.image.image = UIImage(named: "espresso.png")
+            cell.name.text = type.name[indexPath.row]
+        }
+        
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "goToCart", sender: nil)
     }
     
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

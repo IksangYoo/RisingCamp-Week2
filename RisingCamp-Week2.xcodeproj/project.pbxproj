@@ -16,6 +16,7 @@
 		DDA5AD4A29888630004B3D62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA5AD4829888630004B3D62 /* Main.storyboard */; };
 		DDA5AD4C29888631004B3D62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDA5AD4B29888631004B3D62 /* Assets.xcassets */; };
 		DDA5AD4F29888631004B3D62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA5AD4D29888631004B3D62 /* LaunchScreen.storyboard */; };
+		DDD2ED2C298BD25A00FF277D /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD2ED2B298BD25A00FF277D /* SelectViewController.swift */; };
 		DDDBE70C298910C5007FA5C7 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDBE70B298910C5007FA5C7 /* CustomView.swift */; };
 		DDDBE70E2989118C007FA5C7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDBE70D2989118C007FA5C7 /* CustomButton.swift */; };
 		DDDBE71029891506007FA5C7 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDDBE70F29891506007FA5C7 /* CustomImageView.swift */; };
@@ -41,6 +42,7 @@
 		DDA5AD4B29888631004B3D62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDA5AD4E29888631004B3D62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDA5AD5029888631004B3D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDD2ED2B298BD25A00FF277D /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
 		DDDBE70B298910C5007FA5C7 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		DDDBE70D2989118C007FA5C7 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		DDDBE70F29891506007FA5C7 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				DDDCE726298A4C3900C33E2C /* OrderViewController.swift */,
 				DDE8FDD3298B875D00589A93 /* HotCoffeesViewController.swift */,
 				DD45D8E1298B8FB400F82544 /* HotCoffeesMenuViewController.swift */,
+				DDD2ED2B298BD25A00FF277D /* SelectViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				DDDBE70E2989118C007FA5C7 /* CustomButton.swift in Sources */,
 				DDDBE71029891506007FA5C7 /* CustomImageView.swift in Sources */,
 				DDA5AD4329888630004B3D62 /* AppDelegate.swift in Sources */,
+				DDD2ED2C298BD25A00FF277D /* SelectViewController.swift in Sources */,
 				DDA5AD4529888630004B3D62 /* SceneDelegate.swift in Sources */,
 				DDDCE72C298A4EA000C33E2C /* OrderTableViewCell.swift in Sources */,
 				DD0212682988C45D000A73FF /* CustomLabel.swift in Sources */,

@@ -149,7 +149,7 @@ extension OrderViewController: UITableViewDelegate, UITableViewDataSource {
              return UITableViewCell()
          }
         if indexPath.section == 0 {
-            cell.menuImageView.image = UIImage(named: "Home2.png")
+            cell.menuImageView.image = UIImage(named: "\(indexPath.row).png")
             cell.menuName.text = "\(drinks[indexPath.row])"
         } else if indexPath.section == 1 {
             cell.menuImageView.image = UIImage(named: "Home3.png")
