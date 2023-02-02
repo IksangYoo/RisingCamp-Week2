@@ -4,7 +4,7 @@
 //
 //  Created by Iksang Yoo on 2023/01/30.
 //
-
+import Tabman
 import UIKit
 
 class ViewController: UIViewController {

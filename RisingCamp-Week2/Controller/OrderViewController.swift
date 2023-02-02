@@ -9,31 +9,84 @@ import UIKit
 
 class OrderViewController: UIViewController {
     
+    
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    private lazy var underLineView: UIView = {
+        let view = UIView()
+        view.backgroundColor = #colorLiteral(red: 0, green: 0.521427691, blue: 0.2605894804, alpha: 1)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    
+    // 움직일 underLineView의 leadingAnchor 따로 작성
+    private lazy var leadingDistance: NSLayoutConstraint = {
+        return underLineView.leadingAnchor.constraint(equalTo: segmentedControl.leadingAnchor)
+    }()
+    
     let sectionTitle = ["Drinks","Food","At Home Coffee","Merchandise","Gift Cards"]
     let sectionSeeAll = ["See all 197","See all 92","See all 22","See all 13","See all 3"]
     let drinks = ["Hot Coffees","Hot Teas","Hot Drinks","Frappuccino","Cold Coffees","Iced Teas","Cold Drinks"]
     let food = ["Hot Breakfast","Bakery","Lunch","Snacks & Sweets","Oatmeal & Yogurt"]
-    
-    var topbarHeight: CGFloat {
-            return (view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0.0) +
-                (self.navigationController?.navigationBar.frame.height ?? 0.0)
-        }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //펜 액션
-        let panGestureRecongnizer = UIPanGestureRecognizer(target: self, action: #selector(panAction(_ :)))
+        //Underline 오토레이아웃
+        view.addSubview(underLineView)
+        NSLayoutConstraint.activate([
+            underLineView.bottomAnchor.constraint(equalTo: segmentedControl.bottomAnchor),
+            underLineView.heightAnchor.constraint(equalToConstant: 3),
+            leadingDistance,
+            underLineView.widthAnchor.constraint(equalTo: segmentedControl.widthAnchor, multiplier: 1 / CGFloat(segmentedControl.numberOfSegments))
+        ])
+//        //펜 액션
+//        let panGestureRecongnizer = UIPanGestureRecognizer(target: self, action: #selector(panAction(_ :)))
+//
+//        panGestureRecongnizer.delegate = self
         
-        panGestureRecongnizer.delegate = self
-        
-        self.view.addGestureRecognizer(panGestureRecongnizer)
-        
+//        self.view.addGestureRecognizer(panGestureRecongnizer)
+
+        segmentedControlUI()
         let nibName = UINib(nibName: "OrderTableViewCell", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "cell")
         
         let headerNib = UINib(nibName: "TableVIewCustomHeader", bundle: nil)
         tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "TableVIewCustomHeader")
+    }
+    
+    @IBAction func pressSegmentedControl(_ sender: UISegmentedControl) {
+        changeUnderlinePosition()
+    }
+    
+    func changeUnderlinePosition() {
+        let segmentIndex = CGFloat(segmentedControl.selectedSegmentIndex)
+        let segmentWidth = segmentedControl.frame.width / CGFloat(segmentedControl.numberOfSegments)
+        let leadingDistance = segmentWidth * segmentIndex
+        UIView.animate(withDuration: 0.2, animations: { [weak self] in
+            self?.leadingDistance.constant = leadingDistance
+            self?.view.layoutIfNeeded()
+        })
+    }
+    
+    
+    func segmentedControlUI() {
+        // 배경 색 제거
+        segmentedControl.setBackgroundImage(UIImage(), for: .normal, barMetrics: .default)
+        // Segment 구분 라인 제거
+        segmentedControl.setDividerImage(UIImage(), forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
+        
+        // 선택 되어 있지 않을때 폰트 및 폰트컬러
+        segmentedControl.setTitleTextAttributes([
+            NSAttributedString.Key.foregroundColor: UIColor.darkGray,
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16, weight: .semibold)
+        ], for: .normal)
+        
+        // 선택 되었을때 폰트 및 폰트컬러
+        segmentedControl.setTitleTextAttributes([
+            NSAttributedString.Key.foregroundColor: UIColor.black,
+            NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16, weight: .semibold)
+        ], for: .selected)
     }
     
 }
@@ -82,28 +135,28 @@ extension OrderViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-//MARK: - UIGestureRecognizerDelegate
-extension OrderViewController: UIGestureRecognizerDelegate {
-
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool{
-        
-        return true
-        
-    }
-
-    @objc func panAction (_ sender : UIPanGestureRecognizer){
-
-            let velocity = sender.velocity(in: tableView)
-        
-        if abs(velocity.y) > abs(velocity.x) {
-            if (velocity.y < 0 ){
-                navigationItem.largeTitleDisplayMode = .always
-            } else {
-                navigationItem.largeTitleDisplayMode = .never
-            }
-            
-        }
-        
-    }
-
-}
+////MARK: - UIGestureRecognizerDelegate
+//extension OrderViewController: UIGestureRecognizerDelegate {
+//
+//    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool{
+//
+//        return true
+//
+//    }
+//
+//    @objc func panAction (_ sender : UIPanGestureRecognizer){
+//
+//            let velocity = sender.velocity(in: tableView)
+//
+//        if abs(velocity.y) > abs(velocity.x) {
+//            if (velocity.y < 0 ){
+//                print("down")
+//                navigationItem.largeTitleDisplayMode = .never
+//            } else {
+//                print("up")
+//                navigationItem.largeTitleDisplayMode = .always
+//            }
+//
+//        }
+//    }
+//}

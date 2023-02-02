@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C049E483D7970309F9627AF0 /* Pods_RisingCamp_Week2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C84760D46347C00535C3A /* Pods_RisingCamp_Week2.framework */; };
 		DD0212682988C45D000A73FF /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0212672988C45D000A73FF /* CustomLabel.swift */; };
 		DDA5AD4329888630004B3D62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA5AD4229888630004B3D62 /* AppDelegate.swift */; };
 		DDA5AD4529888630004B3D62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA5AD4429888630004B3D62 /* SceneDelegate.swift */; };
@@ -25,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15EC0A3DE5A6A4464D12C797 /* Pods-RisingCamp-Week2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RisingCamp-Week2.release.xcconfig"; path = "Target Support Files/Pods-RisingCamp-Week2/Pods-RisingCamp-Week2.release.xcconfig"; sourceTree = "<group>"; };
+		C84C84760D46347C00535C3A /* Pods_RisingCamp_Week2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RisingCamp_Week2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5EBF559B30A0F9C662373A0 /* Pods-RisingCamp-Week2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RisingCamp-Week2.debug.xcconfig"; path = "Target Support Files/Pods-RisingCamp-Week2/Pods-RisingCamp-Week2.debug.xcconfig"; sourceTree = "<group>"; };
 		DD0212672988C45D000A73FF /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		DDA5AD3F29888630004B3D62 /* RisingCamp-Week2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RisingCamp-Week2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDA5AD4229888630004B3D62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,12 +53,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C049E483D7970309F9627AF0 /* Pods_RisingCamp_Week2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		068A4D9A89171129BE47C05B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D5EBF559B30A0F9C662373A0 /* Pods-RisingCamp-Week2.debug.xcconfig */,
+				15EC0A3DE5A6A4464D12C797 /* Pods-RisingCamp-Week2.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		834679004630825D986FA573 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C84C84760D46347C00535C3A /* Pods_RisingCamp_Week2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DD0212692989100A000A73FF /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +106,8 @@
 			children = (
 				DDA5AD4129888630004B3D62 /* RisingCamp-Week2 */,
 				DDA5AD4029888630004B3D62 /* Products */,
+				068A4D9A89171129BE47C05B /* Pods */,
+				834679004630825D986FA573 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,9 +141,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDA5AD5329888631004B3D62 /* Build configuration list for PBXNativeTarget "RisingCamp-Week2" */;
 			buildPhases = (
+				D4104EDB50294070A29DBC87 /* [CP] Check Pods Manifest.lock */,
 				DDA5AD3B29888630004B3D62 /* Sources */,
 				DDA5AD3C29888630004B3D62 /* Frameworks */,
 				DDA5AD3D29888630004B3D62 /* Resources */,
+				0F6D17DCE4DD4B730F43F7C4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -146,7 +172,7 @@
 				};
 			};
 			buildConfigurationList = DDA5AD3A29888630004B3D62 /* Build configuration list for PBXProject "RisingCamp-Week2" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -177,6 +203,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F6D17DCE4DD4B730F43F7C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RisingCamp-Week2/Pods-RisingCamp-Week2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RisingCamp-Week2/Pods-RisingCamp-Week2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RisingCamp-Week2/Pods-RisingCamp-Week2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4104EDB50294070A29DBC87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RisingCamp-Week2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DDA5AD3B29888630004B3D62 /* Sources */ = {
@@ -334,6 +402,7 @@
 		};
 		DDA5AD5429888631004B3D62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5EBF559B30A0F9C662373A0 /* Pods-RisingCamp-Week2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -362,6 +431,7 @@
 		};
 		DDA5AD5529888631004B3D62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15EC0A3DE5A6A4464D12C797 /* Pods-RisingCamp-Week2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
