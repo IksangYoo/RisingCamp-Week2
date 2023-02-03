@@ -45,9 +45,10 @@ class OrderViewController: UIViewController {
         shadowImageView?.isHidden = false
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        statusBarColor()
         //Underline 오토레이아웃
         self.tableView.backgroundColor = #colorLiteral(red: 0.9686275125, green: 0.9686275125, blue: 0.9686275125, alpha: 1)
         view.addSubview(underLineView)
@@ -64,13 +65,6 @@ class OrderViewController: UIViewController {
         
         self.view.addGestureRecognizer(panGestureRecongnizer)
         
-//        //removing border
-//        let navigationBar = navigationController?.navigationBar
-//        let navigationBarAppearance = UINavigationBarAppearance()
-//        navigationBarAppearance.shadowColor = .clear
-//        navigationBar?.scrollEdgeAppearance = navigationBarAppearance
-        
-
         segmentedControlUI()
         
         let nibName = UINib(nibName: "OrderTableViewCell", bundle: nil)
@@ -79,6 +73,24 @@ class OrderViewController: UIViewController {
         let headerNib = UINib(nibName: "TableVIewCustomHeader", bundle: nil)
         tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: "TableVIewCustomHeader")
     }
+
+//    func statusBarColor() {
+//        let app = UIApplication.shared
+//        let statusBarHeight: CGFloat = app.statusBarFrame.size.height
+//        let statusbarView = UIView()
+//        statusbarView.backgroundColor = UIColor.white
+//        view.addSubview(statusbarView)
+//
+//        statusbarView.translatesAutoresizingMaskIntoConstraints = false
+//        statusbarView.heightAnchor
+//            .constraint(equalToConstant: statusBarHeight).isActive = true
+//        statusbarView.widthAnchor
+//            .constraint(equalTo: view.widthAnchor, multiplier: 1.0).isActive = true
+//        statusbarView.topAnchor
+//            .constraint(equalTo: view.topAnchor).isActive = true
+//        statusbarView.centerXAnchor
+//            .constraint(equalTo: view.centerXAnchor).isActive = true
+//    }
     
     @IBAction func pressSegmentedControl(_ sender: UISegmentedControl) {
         changeUnderlinePosition()
@@ -157,6 +169,7 @@ extension OrderViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             return UITableViewCell()
         }
+        cell.selectionStyle = .none
         cell.backgroundColor = cell.contentView.backgroundColor;
         return cell
     }
