@@ -7,7 +7,13 @@
 
 import UIKit
 
-class SelectViewController: UIViewController {
+class SelectViewController: UIViewController,FindStoreDelegate {
+    func pass(_ store: Store) {
+        func pass(_ store: Store) {
+            self.store = store
+        }
+    }
+    
     
     @IBOutlet weak var shortButton: UIButton!
     @IBOutlet weak var tallButton: UIButton!
@@ -19,6 +25,7 @@ class SelectViewController: UIViewController {
     var sizeTitle = "Short"
     let sizes = ["short","tall","grande","venti"]
     var coffees = [Coffee]()
+    var store : Store?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +44,11 @@ class SelectViewController: UIViewController {
         
     }
     @IBAction func bagButtonPressed(_ sender: Any) {
+        let findStoreVC = storyboard?.instantiateViewController(withIdentifier: "findStoreVC") as! FindStoreViewController
+        findStoreVC.delegate = self
         guard let reviewVC = self.storyboard?.instantiateViewController(identifier: "reviewOrderVC") as? ReviewOrderViewController else { return }
         reviewVC.coffees = coffees
+        reviewVC.store = store
         present(reviewVC, animated: true)
     }
     

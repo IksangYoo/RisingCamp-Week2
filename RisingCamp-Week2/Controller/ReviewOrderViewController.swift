@@ -11,10 +11,15 @@ import UIKit
 
 class ReviewOrderViewController: UIViewController {
     
+    
+    var store : Store?
     var coffees = [Coffee]()
+    @IBOutlet weak var addressLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
     }
     
     @IBAction func backButtonPressed(_ sender: UIButton) {

@@ -38,7 +38,15 @@ class OrderViewController: UIViewController {
         }
         shadowImageView?.isHidden = true
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
+        let findStoreVC = storyBoard.instantiateViewController(withIdentifier: "findStoreVC")
+        findStoreVC.modalPresentationStyle = .formSheet
+        present(findStoreVC, animated: true, completion: nil)
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 

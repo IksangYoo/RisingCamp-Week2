@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -386,6 +387,18 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                                        <real key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetHeight">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetWidth">
+                                                        <real key="value" value="6"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
@@ -1069,7 +1082,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="o3Q-8U-8Ux">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="P80-SJ-q4y" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="initiateVC" automaticallyAdjustsScrollViewInsets="NO" id="P80-SJ-q4y" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j5H-J9-d2w">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -1173,6 +1186,187 @@
             </objects>
             <point key="canvasLocation" x="3238.9312977099235" y="-211.26760563380282"/>
         </scene>
+        <!--Find Store View Controller-->
+        <scene sceneID="LYU-QH-2QA">
+            <objects>
+                <viewController storyboardIdentifier="findStoreVC" modalPresentationStyle="currentContext" id="SuJ-Tx-NbW" customClass="FindStoreViewController" customModule="RisingCamp_Week2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K6W-OJ-xSP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ma2-KJ-RZ0">
+                                <rect key="frame" x="0.0" y="59" width="393" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAI-gm-x5r">
+                                        <rect key="frame" x="353" y="22.666666666666671" width="27" height="27"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="MAI-gm-x5r" secondAttribute="height" multiplier="1:1" id="myW-4t-sIL"/>
+                                            <constraint firstAttribute="width" constant="27" id="oev-cK-zhE"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="xmark" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" weight="light"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a store" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLh-CP-kiI" customClass="CustomLabel" customModule="RisingCamp_Week2" customModuleProvider="target">
+                                        <rect key="frame" x="140.66666666666666" y="29" width="112" height="21"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOb-fA-9J9">
+                                        <rect key="frame" x="13" y="20" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="xOb-fA-9J9" secondAttribute="height" multiplier="1:1" id="H2h-oM-Xct"/>
+                                            <constraint firstAttribute="width" constant="32" id="rie-yA-Ozy"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="magnifyingglass" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="24" weight="light"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="8Y6-cE-gyU"/>
+                                    <constraint firstItem="MAI-gm-x5r" firstAttribute="centerY" secondItem="xOb-fA-9J9" secondAttribute="centerY" id="DIO-SJ-uua"/>
+                                    <constraint firstAttribute="trailing" secondItem="MAI-gm-x5r" secondAttribute="trailing" constant="13" id="HOZ-j9-wMV"/>
+                                    <constraint firstItem="xOb-fA-9J9" firstAttribute="top" secondItem="Ma2-KJ-RZ0" secondAttribute="top" constant="20" id="HhD-3x-mv7"/>
+                                    <constraint firstAttribute="bottom" secondItem="JLh-CP-kiI" secondAttribute="bottom" constant="10" id="Nzm-RX-lMr"/>
+                                    <constraint firstItem="xOb-fA-9J9" firstAttribute="leading" secondItem="Ma2-KJ-RZ0" secondAttribute="leading" constant="13" id="t5W-lA-e3b"/>
+                                    <constraint firstItem="JLh-CP-kiI" firstAttribute="centerX" secondItem="Ma2-KJ-RZ0" secondAttribute="centerX" id="y7h-Ay-ayy"/>
+                                </constraints>
+                            </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3u-vF-Hmb">
+                                <rect key="frame" x="0.0" y="119" width="393" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="LhY-kJ-MQ4"/>
+                                </constraints>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="스크린샷 2023-02-03 오전 7.12.54" translatesAutoresizingMaskIntoConstraints="NO" id="yot-qz-g4d">
+                                <rect key="frame" x="0.0" y="439" width="393" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="dAk-6H-hPR"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6d7-Tk-m8F">
+                                <rect key="frame" x="0.0" y="495" width="393" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6355 Young St" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JP0-C4-Afs" customClass="CustomLabel" customModule="RisingCamp_Week2" customModuleProvider="target">
+                                        <rect key="frame" x="19" y="16" width="121" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6355 Young Street, Toronto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOL-Nn-EEZ" customClass="CustomLabel" customModule="RisingCamp_Week2" customModuleProvider="target">
+                                        <rect key="frame" x="19" y="47" width="180" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sjW-Wy-qWO">
+                                        <rect key="frame" x="352" y="17" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="sjW-Wy-qWO" secondAttribute="height" multiplier="1:1" id="6cw-hp-dzY"/>
+                                            <constraint firstAttribute="width" constant="24" id="tdb-Oi-sQm"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="info.circle" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKW-AA-YPT">
+                                        <rect key="frame" x="309" y="16.666666666666686" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="cDF-bd-ge6"/>
+                                            <constraint firstAttribute="width" secondItem="SKW-AA-YPT" secondAttribute="height" multiplier="1:1" id="qUs-QB-s1o"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="heart" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.4 mi  Opens Friday at 6:00 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g0t-xF-Fb1" customClass="CustomLabel" customModule="RisingCamp_Week2" customModuleProvider="target">
+                                        <rect key="frame" x="19" y="65" width="209" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                                <real key="value" value="0.20000000000000001"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="g0t-xF-Fb1" firstAttribute="top" secondItem="bOL-Nn-EEZ" secondAttribute="bottom" constant="1" id="4zj-bz-GcX"/>
+                                    <constraint firstAttribute="height" constant="90" id="5If-xf-0ef"/>
+                                    <constraint firstItem="sjW-Wy-qWO" firstAttribute="leading" secondItem="SKW-AA-YPT" secondAttribute="trailing" constant="18" id="8RI-Nr-142"/>
+                                    <constraint firstItem="sjW-Wy-qWO" firstAttribute="top" secondItem="6d7-Tk-m8F" secondAttribute="top" constant="17" id="Ikx-tf-jJq"/>
+                                    <constraint firstItem="bOL-Nn-EEZ" firstAttribute="top" secondItem="JP0-C4-Afs" secondAttribute="bottom" constant="10" id="KW2-93-bMv"/>
+                                    <constraint firstItem="JP0-C4-Afs" firstAttribute="top" secondItem="6d7-Tk-m8F" secondAttribute="top" constant="16" id="WRu-cd-Ier"/>
+                                    <constraint firstItem="SKW-AA-YPT" firstAttribute="centerY" secondItem="sjW-Wy-qWO" secondAttribute="centerY" id="c45-xC-LJF"/>
+                                    <constraint firstItem="g0t-xF-Fb1" firstAttribute="leading" secondItem="JP0-C4-Afs" secondAttribute="leading" id="eXF-i5-Z2z"/>
+                                    <constraint firstItem="bOL-Nn-EEZ" firstAttribute="leading" secondItem="JP0-C4-Afs" secondAttribute="leading" id="gNA-Ne-iJL"/>
+                                    <constraint firstAttribute="trailing" secondItem="sjW-Wy-qWO" secondAttribute="trailing" constant="17" id="gW8-rO-HZm"/>
+                                    <constraint firstItem="JP0-C4-Afs" firstAttribute="leading" secondItem="6d7-Tk-m8F" secondAttribute="leading" constant="19" id="pfo-63-8cw"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="스크린샷 2023-02-03 오전 7.23.52" translatesAutoresizingMaskIntoConstraints="NO" id="lZS-FP-W37">
+                                <rect key="frame" x="0.0" y="584" width="393" height="5"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2rC-VQ-hE1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6d7-Tk-m8F" firstAttribute="leading" secondItem="2rC-VQ-hE1" secondAttribute="leading" id="1el-ee-yQS"/>
+                            <constraint firstItem="i3u-vF-Hmb" firstAttribute="leading" secondItem="K6W-OJ-xSP" secondAttribute="leading" id="2iR-Rg-6Yx"/>
+                            <constraint firstItem="yot-qz-g4d" firstAttribute="top" secondItem="i3u-vF-Hmb" secondAttribute="bottom" id="73G-UJ-bre"/>
+                            <constraint firstAttribute="trailing" secondItem="i3u-vF-Hmb" secondAttribute="trailing" id="IO5-5a-jGq"/>
+                            <constraint firstItem="lZS-FP-W37" firstAttribute="top" secondItem="yot-qz-g4d" secondAttribute="bottom" constant="89" id="IsY-eb-PZK"/>
+                            <constraint firstItem="Ma2-KJ-RZ0" firstAttribute="leading" secondItem="2rC-VQ-hE1" secondAttribute="leading" id="Jbc-zZ-Odp"/>
+                            <constraint firstAttribute="trailing" secondItem="Ma2-KJ-RZ0" secondAttribute="trailing" id="M7Y-lM-uSD"/>
+                            <constraint firstItem="Ma2-KJ-RZ0" firstAttribute="top" secondItem="2rC-VQ-hE1" secondAttribute="top" id="Yf6-Kp-h1S"/>
+                            <constraint firstItem="yot-qz-g4d" firstAttribute="trailing" secondItem="2rC-VQ-hE1" secondAttribute="trailing" id="a04-Ai-Qdk"/>
+                            <constraint firstItem="6d7-Tk-m8F" firstAttribute="top" secondItem="yot-qz-g4d" secondAttribute="bottom" id="aV3-p4-CBs"/>
+                            <constraint firstItem="yot-qz-g4d" firstAttribute="leading" secondItem="2rC-VQ-hE1" secondAttribute="leading" id="cSJ-Xy-S00"/>
+                            <constraint firstItem="lZS-FP-W37" firstAttribute="leading" secondItem="2rC-VQ-hE1" secondAttribute="leading" id="cff-j8-zO7"/>
+                            <constraint firstItem="2rC-VQ-hE1" firstAttribute="trailing" secondItem="lZS-FP-W37" secondAttribute="trailing" id="l8i-u2-Idt"/>
+                            <constraint firstItem="6d7-Tk-m8F" firstAttribute="trailing" secondItem="2rC-VQ-hE1" secondAttribute="trailing" id="rqi-CB-b15"/>
+                            <constraint firstItem="i3u-vF-Hmb" firstAttribute="top" secondItem="Ma2-KJ-RZ0" secondAttribute="bottom" id="sqp-dL-tfR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="adressLabel" destination="JP0-C4-Afs" id="UeD-PR-l1A"/>
+                        <outlet property="mapView" destination="i3u-vF-Hmb" id="RLc-wb-w5U"/>
+                        <outlet property="storeView" destination="6d7-Tk-m8F" id="fMy-aU-Gyf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DH5-9R-dq1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3954.9618320610684" y="-211.26760563380282"/>
+        </scene>
         <!--Hot Coffees (47)-->
         <scene sceneID="9ch-mX-0SP">
             <objects>
@@ -1272,24 +1466,93 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e61-Jm-iUF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4298" y="-923"/>
+            <point key="canvasLocation" x="4296.9465648854957" y="-923.23943661971839"/>
         </scene>
         <!--Offers-->
         <scene sceneID="XAJ-Cu-EqT">
             <objects>
-                <viewController id="k1V-l2-nIz" sceneMemberID="viewController">
+                <viewController id="k1V-l2-nIz" customClass="OffersViewController" customModule="RisingCamp_Week2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KQh-0H-XNI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="스크린샷 2023-02-03 오전 5.08.18" translatesAutoresizingMaskIntoConstraints="NO" id="M9j-Fa-1M7">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="iSu-ag-dlJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="M9j-Fa-1M7" firstAttribute="top" secondItem="iSu-ag-dlJ" secondAttribute="top" id="EHk-fY-4EY"/>
+                            <constraint firstItem="M9j-Fa-1M7" firstAttribute="trailing" secondItem="iSu-ag-dlJ" secondAttribute="trailing" id="FDd-SK-VXR"/>
+                            <constraint firstItem="M9j-Fa-1M7" firstAttribute="bottom" secondItem="iSu-ag-dlJ" secondAttribute="bottom" id="ImV-ha-e1D"/>
+                            <constraint firstItem="M9j-Fa-1M7" firstAttribute="leading" secondItem="iSu-ag-dlJ" secondAttribute="leading" id="sB7-pg-mqr"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Offers" image="star.fill" catalog="system" id="eK9-7x-Uon"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRq-H7-gbb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5211" y="-923"/>
+            <point key="canvasLocation" x="5209.9236641221369" y="-923.23943661971839"/>
+        </scene>
+        <!--Pop Up View Controller-->
+        <scene sceneID="cdq-ZE-XXn">
+            <objects>
+                <viewController storyboardIdentifier="PopUpVC" id="wbN-WY-54w" customClass="PopUpViewController" customModule="RisingCamp_Week2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mWo-22-guB">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="en5-dH-KV5">
+                                <rect key="frame" x="64" y="17" width="265" height="166"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K7i-Gb-WZX">
+                                        <rect key="frame" x="225" y="8" width="32" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="Bo5-sf-r9A"/>
+                                            <constraint firstAttribute="width" constant="32" id="kRh-WG-sMS"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="xmark" catalog="system"/>
+                                        <connections>
+                                            <action selector="dismiss:" destination="wbN-WY-54w" eventType="touchUpInside" id="UGJ-pL-7R7"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Offer!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FmK-Re-0ag">
+                                        <rect key="frame" x="28.000000000000014" y="57.333333333333329" width="209.33333333333337" height="51.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="43"/>
+                                        <color key="textColor" red="0.11372549830000001" green="0.2235293984" blue="0.19215688110000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="K7i-Gb-WZX" firstAttribute="top" secondItem="en5-dH-KV5" secondAttribute="top" constant="8" id="Ima-iZ-U7q"/>
+                                    <constraint firstItem="FmK-Re-0ag" firstAttribute="centerY" secondItem="en5-dH-KV5" secondAttribute="centerY" id="Qr8-dW-NaZ"/>
+                                    <constraint firstAttribute="width" constant="265" id="RRQ-PG-Q0P"/>
+                                    <constraint firstAttribute="height" constant="166" id="Vjz-VJ-U4H"/>
+                                    <constraint firstItem="FmK-Re-0ag" firstAttribute="centerX" secondItem="en5-dH-KV5" secondAttribute="centerX" id="b7g-Uc-gnE"/>
+                                    <constraint firstAttribute="trailing" secondItem="K7i-Gb-WZX" secondAttribute="trailing" constant="8" id="m5t-oK-gO5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Uyi-Xb-cKD"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="en5-dH-KV5" firstAttribute="centerX" secondItem="mWo-22-guB" secondAttribute="centerX" id="A9m-X3-BHc"/>
+                            <constraint firstItem="en5-dH-KV5" firstAttribute="centerY" secondItem="mWo-22-guB" secondAttribute="centerY" id="JWc-KF-LKu"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="393" height="200"/>
+                    <connections>
+                        <outlet property="offerView" destination="en5-dH-KV5" id="IRx-bC-dQm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xac-id-2mS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6066.4122137404574" y="-923.23943661971839"/>
         </scene>
         <!--Order-->
         <scene sceneID="vyk-TJ-rSx">
@@ -1320,7 +1583,7 @@
             <objects>
                 <viewController id="g7f-Nn-2Rp" customClass="HotCoffeesMenuViewController" customModule="RisingCamp_Week2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tot-8u-XCz">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="312"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="312.33333333333331"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Americanos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4X-fr-eob" customClass="CustomLabel" customModule="RisingCamp_Week2" customModuleProvider="target">
@@ -1422,7 +1685,7 @@
             <objects>
                 <viewController id="utT-bP-dix" customClass="HotCoffeesMenuViewController" customModule="RisingCamp_Week2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J7E-50-8sO">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="313"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="312.66666666666669"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IJc-Ab-QLU">
@@ -1524,7 +1787,7 @@
             <objects>
                 <viewController id="I6i-vj-mny" customClass="HotCoffeesMenuViewController" customModule="RisingCamp_Week2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e0y-iQ-5hU">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="312"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="312.33333333333331"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Americanos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCs-uS-7vL" customClass="CustomLabel" customModule="RisingCamp_Week2" customModuleProvider="target">
@@ -2013,7 +2276,7 @@
                         <outlet property="shortButton" destination="hin-Al-ahp" id="SEK-59-siw"/>
                         <outlet property="tallButton" destination="bOl-QT-LPC" id="dqq-yX-C11"/>
                         <outlet property="ventiButton" destination="CXD-pc-ycq" id="Eiq-42-kS9"/>
-                        <segue destination="tbS-JD-H9l" kind="show" id="UKj-gI-R5d"/>
+                        <segue destination="tbS-JD-H9l" kind="show" identifier="goToReview" id="UKj-gI-R5d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="alq-Bq-tFb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2029,7 +2292,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VVC-ot-VY2">
-                                <rect key="frame" x="10" y="83" width="383" height="635"/>
+                                <rect key="frame" x="10" y="165" width="383" height="553"/>
                                 <color key="backgroundColor" red="0.96862745289999996" green="0.96862745289999996" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="96" id="QIg-s9-YhQ" customClass="orderCell" customModule="RisingCamp_Week2" customModuleProvider="target">
@@ -2127,7 +2390,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Check Out">
+                                <state key="normal" title="Checkout">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -2152,6 +2415,17 @@
                                     <action selector="backButtonPressed:" destination="tbS-JD-H9l" eventType="touchUpInside" id="wIv-fu-0We"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6533 Young Stress" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAG-Ln-Dt7" customClass="CustomLabel" customModule="RisingCamp_Week2" customModuleProvider="target">
+                                <rect key="frame" x="16" y="113" width="196.33333333333334" height="26.333333333333343"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="e7w-HO-D4b"/>
                         <color key="backgroundColor" red="0.96862745289999996" green="0.96862745289999996" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -2159,9 +2433,11 @@
                             <constraint firstItem="uZT-Ap-w0w" firstAttribute="top" secondItem="e7w-HO-D4b" secondAttribute="top" id="Gb1-5g-OrI"/>
                             <constraint firstItem="e7w-HO-D4b" firstAttribute="bottom" secondItem="VVC-ot-VY2" secondAttribute="bottom" constant="100" id="QSX-OT-tfH"/>
                             <constraint firstItem="uZT-Ap-w0w" firstAttribute="leading" secondItem="e7w-HO-D4b" secondAttribute="leading" constant="16" id="VdW-Su-0Rh"/>
-                            <constraint firstItem="VVC-ot-VY2" firstAttribute="top" secondItem="uZT-Ap-w0w" secondAttribute="bottom" id="VxZ-g4-ZHg"/>
                             <constraint firstItem="e7w-HO-D4b" firstAttribute="trailing" secondItem="9WK-AF-QyR" secondAttribute="trailing" constant="16" id="XyM-vX-FRg"/>
                             <constraint firstItem="e7w-HO-D4b" firstAttribute="bottom" secondItem="9WK-AF-QyR" secondAttribute="bottom" constant="34" id="m2d-yW-TnG"/>
+                            <constraint firstItem="VVC-ot-VY2" firstAttribute="top" secondItem="kAG-Ln-Dt7" secondAttribute="bottom" constant="25.670000000000002" id="mfU-JN-3al"/>
+                            <constraint firstItem="kAG-Ln-Dt7" firstAttribute="leading" secondItem="e7w-HO-D4b" secondAttribute="leading" constant="16" id="rWh-6z-iIm"/>
+                            <constraint firstItem="kAG-Ln-Dt7" firstAttribute="top" secondItem="uZT-Ap-w0w" secondAttribute="bottom" constant="30" id="xfg-rv-P1T"/>
                             <constraint firstItem="VVC-ot-VY2" firstAttribute="leading" secondItem="e7w-HO-D4b" secondAttribute="leading" constant="10" id="zkI-U7-pAb"/>
                             <constraint firstItem="VVC-ot-VY2" firstAttribute="trailing" secondItem="e7w-HO-D4b" secondAttribute="trailing" id="zl1-kf-eUx"/>
                         </constraints>
@@ -2174,6 +2450,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addressLabel" destination="kAG-Ln-Dt7" id="Fax-FK-LYd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hbn-qg-gIa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2184,7 +2463,7 @@
             <objects>
                 <viewController id="Yau-yq-E01" customClass="HotCoffeesMenuViewController" customModule="RisingCamp_Week2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dfn-vY-I0T">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="313"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="312.66666666666669"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Americanos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBN-bH-KdS" customClass="CustomLabel" customModule="RisingCamp_Week2" customModuleProvider="target">
@@ -2283,7 +2562,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="GE0-6k-qTV"/>
+        <segue reference="OWg-uB-s4e"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Home1" width="639" height="391"/>
@@ -2299,7 +2578,9 @@
         <image name="exclamationmark.circle" catalog="system" width="128" height="123"/>
         <image name="gift.fill" catalog="system" width="128" height="125"/>
         <image name="grande" width="120" height="191"/>
+        <image name="heart" catalog="system" width="128" height="107"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="info.circle" catalog="system" width="128" height="123"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="orderaheadImage" width="99" height="92"/>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
@@ -2319,6 +2600,9 @@
         <image name="스크린샷 2023-02-02 오전 6.26.06" width="613" height="10"/>
         <image name="스크린샷 2023-02-02 오전 7.15.07" width="998" height="916"/>
         <image name="스크린샷 2023-02-02 오전 7.16.28" width="462" height="158"/>
+        <image name="스크린샷 2023-02-03 오전 5.08.18" width="412" height="763"/>
+        <image name="스크린샷 2023-02-03 오전 7.12.54" width="497" height="65"/>
+        <image name="스크린샷 2023-02-03 오전 7.23.52" width="637" height="5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
