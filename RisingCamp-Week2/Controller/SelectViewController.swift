@@ -16,8 +16,9 @@ class SelectViewController: UIViewController {
     @IBOutlet weak var caloriesLabel: CustomLabel!
     @IBOutlet weak var bagButton: UIButton!
     @IBOutlet weak var image: UIImageView!
-    
+    var sizeTitle = "Short"
     let sizes = ["short","tall","grande","venti"]
+    var coffees = [Coffee]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +26,20 @@ class SelectViewController: UIViewController {
     }
     
     @IBAction func addToOrderPressed(_ sender: UIButton) {
-        bagButton.setImage(UIImage(named: "cart1"), for: .normal)
+        coffees.append(Coffee(name: "Caffe Americano", size: sizeTitle, calories: caloriesLabel.text!))
+        if (coffees.count < 4) {
+            bagButton.setImage(UIImage(named: "cart\(coffees.count)"), for: .normal)
+        }
     }
     
     @IBAction func sizeButtonPressed(_ sender: UIButton) {
         changeSizeButtonChage(sender)
         
+    }
+    @IBAction func bagButtonPressed(_ sender: Any) {
+        guard let reviewVC = self.storyboard?.instantiateViewController(identifier: "reviewOrderVC") as? ReviewOrderViewController else { return }
+        reviewVC.coffees = coffees
+        present(reviewVC, animated: true)
     }
     
     func changeSizeButtonChage(_ sender: UIButton) {
@@ -39,6 +48,7 @@ class SelectViewController: UIViewController {
             tallButton.setImage(UIImage(named: sizes[1]), for: .normal)
             grandeButton.setImage(UIImage(named: sizes[2]), for: .normal)
             ventiButton.setImage(UIImage(named: sizes[3]), for: .normal)
+            sizeTitle = "Short"
             caloriesLabel.text = "5 calories"
         }
         else if (sender.currentTitle == sizes[1]) {
@@ -46,6 +56,7 @@ class SelectViewController: UIViewController {
             shortButton.setImage(UIImage(named: sizes[0]), for: .normal)
             grandeButton.setImage(UIImage(named: sizes[2]), for: .normal)
             ventiButton.setImage(UIImage(named: sizes[3]), for: .normal)
+            sizeTitle = "Tall"
             caloriesLabel.text = "10 calories"
         }
         else if (sender.currentTitle == sizes[2]) {
@@ -53,6 +64,7 @@ class SelectViewController: UIViewController {
             tallButton.setImage(UIImage(named: sizes[1]), for: .normal)
             shortButton.setImage(UIImage(named: sizes[0]), for: .normal)
             ventiButton.setImage(UIImage(named: sizes[3]), for: .normal)
+            sizeTitle = "Grande"
             caloriesLabel.text = "15 calories"
         }
         else if  (sender.currentTitle == sizes[3]) {
@@ -60,6 +72,7 @@ class SelectViewController: UIViewController {
             tallButton.setImage(UIImage(named: sizes[1]), for: .normal)
             grandeButton.setImage(UIImage(named: sizes[2]), for: .normal)
             shortButton.setImage(UIImage(named: sizes[0]), for: .normal)
+            sizeTitle = "Venti"
             caloriesLabel.text = "20 calories"
         }
     }

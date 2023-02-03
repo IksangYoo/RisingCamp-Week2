@@ -197,13 +197,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rewardBar" translatesAutoresizingMaskIntoConstraints="NO" id="iyO-87-gXS">
-                                                <rect key="frame" x="17" y="93.666666666666686" width="398" height="67"/>
+                                                <rect key="frame" x="17" y="89" width="398" height="72"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="iyO-87-gXS" secondAttribute="height" multiplier="372:67" constant="26" id="Lbx-4z-UNf"/>
+                                                    <constraint firstAttribute="width" secondItem="iyO-87-gXS" secondAttribute="height" multiplier="372:67" constant="-1.761194029850742" id="Lbx-4z-UNf"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A86-6a-x0V" customClass="CustomButton" customModule="RisingCamp_Week2" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="175.66666666666669" width="90" height="32"/>
+                                                <rect key="frame" x="20" y="176" width="90" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="6gB-aY-Ihd"/>
                                                 </constraints>
@@ -999,7 +999,7 @@
                                             <constraint firstItem="YXb-p8-nWJ" firstAttribute="top" secondItem="jkN-et-9Oj" secondAttribute="bottom" constant="13" id="u3m-HD-iWk"/>
                                             <constraint firstAttribute="trailing" secondItem="YUA-uF-05L" secondAttribute="trailing" constant="8" id="uml-Ed-LX1"/>
                                             <constraint firstItem="eXS-cn-OcA" firstAttribute="leading" secondItem="1Ak-am-awu" secondAttribute="leading" constant="22" id="v7f-lm-PXk"/>
-                                            <constraint firstItem="iyO-87-gXS" firstAttribute="top" secondItem="eXS-cn-OcA" secondAttribute="bottom" constant="9" id="w4c-9P-hWd"/>
+                                            <constraint firstItem="iyO-87-gXS" firstAttribute="top" secondItem="eXS-cn-OcA" secondAttribute="bottom" constant="4.3333333333333144" id="w4c-9P-hWd"/>
                                             <constraint firstAttribute="trailing" secondItem="otp-mx-BM7" secondAttribute="trailing" constant="8" id="wsC-ru-KHO"/>
                                             <constraint firstItem="eCU-YK-zHT" firstAttribute="top" secondItem="otp-mx-BM7" secondAttribute="bottom" constant="13" id="xfp-UB-XAv"/>
                                             <constraint firstItem="A86-6a-x0V" firstAttribute="top" secondItem="iyO-87-gXS" secondAttribute="bottom" constant="15" id="yAH-M1-6Vc"/>
@@ -1320,7 +1320,7 @@
             <objects>
                 <viewController id="g7f-Nn-2Rp" customClass="HotCoffeesMenuViewController" customModule="RisingCamp_Week2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tot-8u-XCz">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="312.33333333333331"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="312"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Americanos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4X-fr-eob" customClass="CustomLabel" customModule="RisingCamp_Week2" customModuleProvider="target">
@@ -1422,7 +1422,7 @@
             <objects>
                 <viewController id="utT-bP-dix" customClass="HotCoffeesMenuViewController" customModule="RisingCamp_Week2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J7E-50-8sO">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="312.66666666666669"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="313"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IJc-Ab-QLU">
@@ -1524,7 +1524,7 @@
             <objects>
                 <viewController id="I6i-vj-mny" customClass="HotCoffeesMenuViewController" customModule="RisingCamp_Week2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e0y-iQ-5hU">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="312.33333333333331"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="312"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Americanos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCs-uS-7vL" customClass="CustomLabel" customModule="RisingCamp_Week2" customModuleProvider="target">
@@ -1624,7 +1624,7 @@
         <!--Select View Controller-->
         <scene sceneID="TLS-PP-th0">
             <objects>
-                <viewController id="Hoj-Ax-Puk" customClass="SelectViewController" customModule="RisingCamp_Week2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SelectVC" id="Hoj-Ax-Puk" customClass="SelectViewController" customModule="RisingCamp_Week2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LaG-dc-xrG">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="1431"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1965,6 +1965,9 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="cart0"/>
+                                        <connections>
+                                            <action selector="bagButtonPressed:" destination="Hoj-Ax-Puk" eventType="touchUpInside" id="4Jv-sm-TeF"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="스크린샷 2023-02-02 오전 5.46.18" translatesAutoresizingMaskIntoConstraints="NO" id="QeF-Tl-sBE">
                                         <rect key="frame" x="22" y="30" width="308" height="30"/>
@@ -1999,6 +2002,7 @@
                             <constraint firstItem="uuA-NN-qOk" firstAttribute="leading" secondItem="QSE-7C-zeR" secondAttribute="leading" id="tTu-jI-BSl"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Sc0-xQ-Umz"/>
                     <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="393" height="1500"/>
                     <connections>
@@ -2009,18 +2013,178 @@
                         <outlet property="shortButton" destination="hin-Al-ahp" id="SEK-59-siw"/>
                         <outlet property="tallButton" destination="bOl-QT-LPC" id="dqq-yX-C11"/>
                         <outlet property="ventiButton" destination="CXD-pc-ycq" id="Eiq-42-kS9"/>
+                        <segue destination="tbS-JD-H9l" kind="show" id="UKj-gI-R5d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="alq-Bq-tFb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5262" y="780"/>
         </scene>
+        <!--Review Order-->
+        <scene sceneID="khM-di-3wJ">
+            <objects>
+                <viewController storyboardIdentifier="reviewOrderVC" modalPresentationStyle="fullScreen" id="tbS-JD-H9l" customClass="ReviewOrderViewController" customModule="RisingCamp_Week2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Ga-nd-0fn">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VVC-ot-VY2">
+                                <rect key="frame" x="10" y="83" width="383" height="635"/>
+                                <color key="backgroundColor" red="0.96862745289999996" green="0.96862745289999996" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="96" id="QIg-s9-YhQ" customClass="orderCell" customModule="RisingCamp_Week2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="383" height="96"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QIg-s9-YhQ" id="QGU-4A-gUa">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="96"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="americano" translatesAutoresizingMaskIntoConstraints="NO" id="dDj-xw-dAC">
+                                                    <rect key="frame" x="0.0" y="20" width="76" height="76"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="dDj-xw-dAC" secondAttribute="height" multiplier="1:1" id="gT1-aa-con"/>
+                                                        <constraint firstAttribute="height" constant="100" id="ijb-7W-v5I"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 calories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWk-DH-Lgj" customClass="CustomLabel" customModule="RisingCamp_Week2" customModuleProvider="target">
+                                                    <rect key="frame" x="91" y="68" width="59" height="18"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                                            <real key="value" value="0.29999999999999999"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Caffe Americano" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFG-I3-Jh8" customClass="CustomLabel" customModule="RisingCamp_Week2" customModuleProvider="target">
+                                                    <rect key="frame" x="90.999999999999986" y="27" width="154.66666666666663" height="25.333333333333329"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                                            <real key="value" value="0.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WS1-18-U8e">
+                                                    <rect key="frame" x="350" y="30.666666666666671" width="18" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="WS1-18-U8e" secondAttribute="height" multiplier="1:1" id="ASa-qK-t9f"/>
+                                                        <constraint firstAttribute="width" constant="18" id="cAi-xL-Qhm"/>
+                                                    </constraints>
+                                                    <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="xmark" catalog="system"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tall" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAu-sD-IVO" customClass="CustomLabel" customModule="RisingCamp_Week2" customModuleProvider="target">
+                                                    <rect key="frame" x="91" y="46.333333333333336" width="25" height="21.666666666666664"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="characterSpacing">
+                                                            <real key="value" value="0.5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dDj-xw-dAC" firstAttribute="top" secondItem="QGU-4A-gUa" secondAttribute="top" constant="20" id="Emq-eG-NvI"/>
+                                                <constraint firstAttribute="trailing" secondItem="WS1-18-U8e" secondAttribute="trailing" constant="15" id="H8R-YN-4EL"/>
+                                                <constraint firstItem="MWk-DH-Lgj" firstAttribute="bottom" secondItem="dDj-xw-dAC" secondAttribute="bottom" constant="-10" id="MLb-CE-wkp"/>
+                                                <constraint firstItem="nFG-I3-Jh8" firstAttribute="top" secondItem="QGU-4A-gUa" secondAttribute="top" constant="27" id="SBv-if-RLv"/>
+                                                <constraint firstItem="MWk-DH-Lgj" firstAttribute="top" secondItem="ZAu-sD-IVO" secondAttribute="bottom" id="Y1m-Pu-zhb"/>
+                                                <constraint firstAttribute="bottom" secondItem="dDj-xw-dAC" secondAttribute="bottom" id="dBS-PT-b6S"/>
+                                                <constraint firstItem="MWk-DH-Lgj" firstAttribute="leading" secondItem="nFG-I3-Jh8" secondAttribute="leading" id="fYk-5l-ene"/>
+                                                <constraint firstItem="WS1-18-U8e" firstAttribute="centerY" secondItem="nFG-I3-Jh8" secondAttribute="centerY" id="j7C-fB-DHf"/>
+                                                <constraint firstItem="dDj-xw-dAC" firstAttribute="leading" secondItem="QGU-4A-gUa" secondAttribute="leading" id="qk7-ok-e0U"/>
+                                                <constraint firstItem="ZAu-sD-IVO" firstAttribute="leading" secondItem="nFG-I3-Jh8" secondAttribute="leading" id="qx3-wG-roa"/>
+                                                <constraint firstItem="nFG-I3-Jh8" firstAttribute="leading" secondItem="dDj-xw-dAC" secondAttribute="trailing" constant="15" id="vxT-fl-RBc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.96862745289999996" green="0.96862745289999996" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="caloriesLabel" destination="MWk-DH-Lgj" id="gB3-kE-0fp"/>
+                                            <outlet property="drinkImageView" destination="dDj-xw-dAC" id="Jqy-ei-x2j"/>
+                                            <outlet property="nameLabel" destination="nFG-I3-Jh8" id="PfJ-Rg-h8a"/>
+                                            <outlet property="sizeLabel" destination="ZAu-sD-IVO" id="AKh-j0-vPh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="tbS-JD-H9l" id="dRa-f8-ER3"/>
+                                    <outlet property="delegate" destination="tbS-JD-H9l" id="EaF-R7-sLn"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WK-AF-QyR" customClass="CustomButton" customModule="RisingCamp_Week2" customModuleProvider="target">
+                                <rect key="frame" x="207" y="729" width="170" height="55"/>
+                                <color key="backgroundColor" red="0.0" green="0.52140659089999997" blue="0.2606222332" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="170" id="TiN-lq-kHq"/>
+                                    <constraint firstAttribute="height" constant="55" id="iuu-GO-p5J"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Check Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZT-Ap-w0w">
+                                <rect key="frame" x="16" y="59" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="4A3-cq-syI"/>
+                                    <constraint firstAttribute="height" constant="24" id="e0H-Ys-Qf9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="chevron.backward" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="23"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="tbS-JD-H9l" eventType="touchUpInside" id="wIv-fu-0We"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e7w-HO-D4b"/>
+                        <color key="backgroundColor" red="0.96862745289999996" green="0.96862745289999996" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="uZT-Ap-w0w" firstAttribute="top" secondItem="e7w-HO-D4b" secondAttribute="top" id="Gb1-5g-OrI"/>
+                            <constraint firstItem="e7w-HO-D4b" firstAttribute="bottom" secondItem="VVC-ot-VY2" secondAttribute="bottom" constant="100" id="QSX-OT-tfH"/>
+                            <constraint firstItem="uZT-Ap-w0w" firstAttribute="leading" secondItem="e7w-HO-D4b" secondAttribute="leading" constant="16" id="VdW-Su-0Rh"/>
+                            <constraint firstItem="VVC-ot-VY2" firstAttribute="top" secondItem="uZT-Ap-w0w" secondAttribute="bottom" id="VxZ-g4-ZHg"/>
+                            <constraint firstItem="e7w-HO-D4b" firstAttribute="trailing" secondItem="9WK-AF-QyR" secondAttribute="trailing" constant="16" id="XyM-vX-FRg"/>
+                            <constraint firstItem="e7w-HO-D4b" firstAttribute="bottom" secondItem="9WK-AF-QyR" secondAttribute="bottom" constant="34" id="m2d-yW-TnG"/>
+                            <constraint firstItem="VVC-ot-VY2" firstAttribute="leading" secondItem="e7w-HO-D4b" secondAttribute="leading" constant="10" id="zkI-U7-pAb"/>
+                            <constraint firstItem="VVC-ot-VY2" firstAttribute="trailing" secondItem="e7w-HO-D4b" secondAttribute="trailing" id="zl1-kf-eUx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Review Order" id="OO2-cb-Csk">
+                        <barButtonItem key="rightBarButtonItem" image="xmark" catalog="system" id="bPn-jW-2dH">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="tbS-JD-H9l" id="O8B-uS-jRT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hbn-qg-gIa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6171.7557251908393" y="512.67605633802816"/>
+        </scene>
         <!--Hot Coffees Menu View Controller-->
         <scene sceneID="ffw-qM-PPd">
             <objects>
                 <viewController id="Yau-yq-E01" customClass="HotCoffeesMenuViewController" customModule="RisingCamp_Week2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dfn-vY-I0T">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="312.66666666666669"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="313"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Americanos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBN-bH-KdS" customClass="CustomLabel" customModule="RisingCamp_Week2" customModuleProvider="target">
@@ -2119,7 +2283,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0Zb-9G-iCC"/>
+        <segue reference="GE0-6k-qTV"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Home1" width="639" height="391"/>
@@ -2129,6 +2293,7 @@
         <image name="PinImage" width="330" height="500"/>
         <image name="americano" width="272" height="272"/>
         <image name="cart0" width="77" height="85"/>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="doc.richtext.he" catalog="system" width="115" height="128"/>
         <image name="envelope" catalog="system" width="128" height="93"/>
         <image name="exclamationmark.circle" catalog="system" width="128" height="123"/>
@@ -2146,6 +2311,7 @@
         <image name="tall" width="119" height="190"/>
         <image name="tree" width="241" height="303"/>
         <image name="venti" width="121" height="192"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <image name="스크린샷 2023-01-31 오후 4.28.27" width="472" height="252"/>
         <image name="스크린샷 2023-01-31 오후 6.52.49" width="534" height="533"/>
         <image name="스크린샷 2023-02-02 오전 5.46.18" width="525" height="53"/>
